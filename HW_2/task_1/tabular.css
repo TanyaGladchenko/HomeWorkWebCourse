@@ -1,0 +1,25 @@
+table{
+    width: 100%;
+}
+td{
+    border: 5px solid white;
+}
+.row-1 td{
+    height: 50px;
+    background-color: darkorange;
+}
+
+.row-2 td{
+    height: 200px;
+    background-color: yellow;
+}
+
+.row-3 td{
+    height: 150px;
+    background-color: blue;
+}
+
+.row-4 td{
+    height: 100px;
+    background-color: lightslategrey;
+}
