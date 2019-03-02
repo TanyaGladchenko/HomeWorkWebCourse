@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 1em sans-serif;
+    background-color: ghostwhite;
+}
+p{
+    text-align: center;
+}
+.title{
+    font-weight: bold;
+}
+.container{
+    height: 96vh;
+    width: 96vw;
+    margin: 2vh 2vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.item{
+    flex: 1 1 238px;
+    margin: 0.25vh 0.25vw;
+    background-color: white;
+}
+.item img{
+    width: 100%;
+}
