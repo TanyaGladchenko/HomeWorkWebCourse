@@ -1,59 +1,50 @@
 // Book
-function Book(_title, _author, _fieldOfStudy){
+function Book(_id, _title, _author){
+    this.id = _id;
     this.title = _title;
-    this.author = _author;
-    this.fieldOfStudy = _fieldOfStudy;
-}
-Book.prototype.getTitle = function (){
-    return this.title;
-}
-Book.prototype.setTitle = function (_title){
-    this.title = _title;
-}
-Book.prototype.getAuthor = function(){
-    return this.author;
-}
-Book.prototype.setAuthor = function(_author){
-    this.author = _author;
-}
-Book.prototype.getFieldOfStudy = function(){
-    return this.fieldOfStudy;
-}
-Book.prototype.setFieldOfStudy = function(_fieldOfStudy){
-    this.fieldOfStudy = _fieldOfStudy;
+    this.getId = function (){
+        return this.id;
+    }
+    this.setId = function (_id){
+        this.id = _id;
+    }
+    this.getTitle = function (){
+        return this.title;
+    }
+    this.setTitle = function (_title){
+        this.title = _title;
+    }
+    this.getAuthor = function(){
+        return this.author;
+    }
+    this.setAuthor = function(_author){
+        this.author = _author;
+    }
 }
 
 //AudioBook
-function AudioBook(_title, _author, _fieldOfStudy, _minutes){
-    Book.call(this, _title, _author, _fieldOfStudy);
-    this.minutes = _minutes
-}
-
-AudioBook.prototype = Object.create(Book.prototype);
-AudioBook.prototype.constructor = AudioBook;
-
-AudioBook.prototype.getMinutes = function(){
-    return this.minutes;
-}
-AudioBook.prototype.setMinutes = function(_minutes){
+function AudioBook(_id, _title, _author, _minutes){
+    Book.call(this, _id, _title, _author);
     this.minutes = _minutes;
-}
 
+    this.getMinutes = function(){
+        return this.minutes;
+    }
+    this.setMinutes = function(_minutes){
+        this.minutes = _minutes;
+    }
+}
 //TextBook
-function TextBook(_title, _author, _fieldOfStudy, _pages){
-    Book.call(this, _title, _author, _fieldOfStudy);
-    this.pages = _pages
-}
-
-TextBook.prototype = Object.create(Book.prototype);
-TextBook.prototype.constructor = TextBook;
-
-TextBook.prototype.getPages = function(){
-    return this.pages;
-}
-TextBook.prototype.setPages = function(_pages){
+function TextBook(_id, _title, _author, _pages){
+    Book.call(this, _id, _title, _author);
     this.pages = _pages;
+
+    this.getPages = function(){
+        return this.pages;
+    }
+
+    this.setPages = function(_pages){
+        this.pages = _pages;
+    }
 }
-
-
 
