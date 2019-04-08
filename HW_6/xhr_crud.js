@@ -18,13 +18,12 @@ xhrCrudJson = function(){
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     alert(this.responseText);
-                    readBooks();
+            //        readBooks();
                 } 
             });
-
             xhr.open("POST", "http://195.50.2.67:2403/tg-books");
             xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.send(jsonBook);
+            xhr.send(jsonBook);            
         },
         updateBookEvent : function(e){
             var jsonBook = formDataToJson(document);
