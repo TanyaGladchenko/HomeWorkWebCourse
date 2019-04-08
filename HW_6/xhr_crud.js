@@ -1,10 +1,10 @@
 xhrCrudJson = function(){ 
     var formDataToJson = function(){
         var textBook = new TextBook(
-            String(document.getElementById("book_id").value),
-            String(document.getElementById("title").value),
-            String(document.getElementById("author").value),
-            Number(document.getElementById("pages").value),
+            document.getElementById("book_id").value,
+            document.getElementById("title").value,
+            document.getElementById("author").value,
+            document.getElementById("pages").value,
         );
         return JSON.stringify(textBook);
     }
@@ -14,7 +14,7 @@ xhrCrudJson = function(){
             var jsonBook = formDataToJson();
             console.log(jsonBook);
             xhr = new XMLHttpRequest();
-            xhr.withCredentials = true;
+            // xhr.withCredentials = true;
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     alert(this.responseText);
