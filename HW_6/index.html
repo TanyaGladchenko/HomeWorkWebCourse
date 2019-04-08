@@ -34,7 +34,7 @@
                 <label for="pages">Pages</label>
                 <input class="form-control" type="number" id="pages" placeholder="Enter pages" name="pages">
             </div>
-
+            </form>
 
             <div>
                 <button type="submit" id="crtButton" name="crt" class="btn btn-primary">Create</button>
@@ -43,10 +43,14 @@
                 <button type="submit" id="clearButton" name="clr" class="btn btn-primary">Clear</button>
             </div>
         </form>
-        <table class="table table-sm" id="list_book">
+        <br>
+        <table class="table table-sm table-striped" id="list_book">
             <thead>
                 <tr>
-
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
                 </tr>
             </thead>
             <tbody>
