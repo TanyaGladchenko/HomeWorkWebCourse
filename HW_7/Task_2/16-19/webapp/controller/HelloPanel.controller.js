@@ -1,6 +1,6 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
+    "sap/m/MessageToast"
 ], function (Controller, MessageToast) {
 	"use strict";
 	return Controller.extend("sap.ui.demo.walkthrough.controller.HelloPanel", {
@@ -9,7 +9,12 @@ sap.ui.define([
             var sRecipient = this.getView().getModel().getProperty("/recipient/name");
             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
             MessageToast.show(sMsg);
+        },
+        
+        onOpenDialog : function () {
+			this.getOwnerComponent().openHelloDialog();
 		}
+
 	});
 
 });
